@@ -1,5 +1,6 @@
 import React from 'react';
-import OnboardingFirst from './pages/Onboarding/OnboardingFirst';
+import GetStarted from './pages/GetStarted';
+import OnboardingFirstScreen from './pages/OnboardingFirstScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -9,7 +10,11 @@ function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="OnboardingFirst" component={OnboardingFirst} />
+        <Stack.Screen name="GetStarted" component={GetStarted} />
+        <Stack.Screen
+          name="OnboardingFirstScreen"
+          component={OnboardingFirstScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
