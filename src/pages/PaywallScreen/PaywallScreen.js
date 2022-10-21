@@ -1,7 +1,9 @@
-import {View, Text, ImageBackground, FlatList} from 'react-native';
-import React from 'react';
+import {View, Text, ImageBackground, FlatList, StatusBar} from 'react-native';
+import React, {useState} from 'react';
 import styles from './PaywallScreen.style';
 import Slide from '../../components/Slide';
+import GenericButton from '../../components/GenericButton';
+import GreenButton from '../../components/GreenButton';
 const slides = [
   {
     id: '1',
@@ -27,8 +29,11 @@ const renderItem = ({item}) => (
   <Slide title={item.title} subtitle={item.subtitle} icon={item.icon} />
 );
 const PaywallScreen = () => {
+  const [selectedRadioButton, setSelectedRadioButton] = useState('second');
+
   return (
-    <>
+    <View style={styles.container}>
+      <StatusBar barStyle="light-content" />
       <ImageBackground
         source={require('../../assets/paywallBG.jpg')}
         resizeMode="cover"
@@ -48,8 +53,46 @@ const PaywallScreen = () => {
           />
         </View>
       </ImageBackground>
-      <View style={styles.buttonsContainer}></View>
-    </>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.innerButtonsContainer}>
+          <GenericButton
+            name={'first'}
+            theme={'primary'}
+            title={'1 Month'}
+            detail={'$2.99/month, auto renewable'}
+            selectedRadioButton={selectedRadioButton}
+            onPress={() => {
+              setSelectedRadioButton('first');
+            }}
+          />
+          <GenericButton
+            name={'second'}
+            theme={'secondary'}
+            title={'1 Year'}
+            detail={'First 3 days free, then $529,99/year'}
+            selectedRadioButton={selectedRadioButton}
+            onPress={() => {
+              setSelectedRadioButton('second');
+            }}
+          />
+        </View>
+        <View style={styles.greenButtonContainer}>
+          <GreenButton
+            title={'Try free for 3 days'}
+            onPress={() => {
+              console.log('tık');
+            }}
+          />
+        </View>
+
+        <Text style={styles.explanation}>
+          After the 3-day free trial period you’ll be charged ₺274.99 per year
+          unless you cancel before the trial expires. Yearly Subscription is
+          Auto-Renewable
+        </Text>
+        <Text style={styles.termsText}>Terms • Privacy • Restore</Text>
+      </View>
+    </View>
   );
 };
 
