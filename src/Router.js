@@ -1,6 +1,7 @@
 import React from 'react';
 import GetStarted from './pages/GetStarted';
 import OnboardingFirstScreen from './pages/OnboardingFirstScreen';
+import PaywallScreen from './pages/PaywallScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -15,6 +16,7 @@ function Router() {
           name="OnboardingFirstScreen"
           component={OnboardingFirstScreen}
         />
+        <Stack.Screen name="PaywallScreen" component={PaywallScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
