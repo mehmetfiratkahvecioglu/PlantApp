@@ -1,4 +1,11 @@
-import {View, Text, ImageBackground, FlatList, StatusBar} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  FlatList,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState} from 'react';
 import styles from './PaywallScreen.style';
 import Slide from '../../components/Slide';
@@ -28,7 +35,7 @@ const slides = [
 const renderItem = ({item}) => (
   <Slide title={item.title} subtitle={item.subtitle} icon={item.icon} />
 );
-const PaywallScreen = () => {
+const PaywallScreen = ({navigation}) => {
   const [selectedRadioButton, setSelectedRadioButton] = useState('second');
 
   return (
@@ -38,6 +45,14 @@ const PaywallScreen = () => {
         source={require('../../assets/paywallBG.jpg')}
         resizeMode="cover"
         style={styles.image}>
+        <TouchableOpacity
+          style={styles.xButton}
+          onPress={() => {
+            navigation.navigate('TabNavigator');
+          }}>
+          <Text style={styles.xText}>x</Text>
+        </TouchableOpacity>
+
         <View style={styles.titleContainer}>
           <Text style={styles.title}>
             <Text style={styles.insideTitle}>PlantApp</Text> Premium

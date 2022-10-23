@@ -11,6 +11,18 @@ const styles = StyleSheet.create({
     width: width,
     justifyContent: 'flex-end',
   },
+  xButton: {
+    width: 24,
+    height: 24,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    position: 'absolute',
+    top: 55,
+    right: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+  },
+  xText: {color: 'rgba(255, 255, 255, 1)', fontWeight: 'bold', fontSize: 15},
   titleContainer: {marginHorizontal: 20, marginBottom: 10},
   title: {
     color: 'white',
@@ -25,7 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 24,
   },
-  flatListContainer: {marginHorizontal: 10},
+  flatListContainer: {marginLeft: 10},
   buttonsContainer: {
     height: height * 0.4,
     alignItems: 'center',
