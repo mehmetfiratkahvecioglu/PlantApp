@@ -6,11 +6,11 @@ import {
   StatusBar,
   FlatList,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './HomeScreen.style';
 import ExplanationCard from '../../../components/ExplanationCard';
 import CategoryCard from '../../../components/CategoryCard';
-
+import {useSelector, useDispatch} from 'react-redux';
 const explanationCardSlides = [
   {
     id: '1',
@@ -47,7 +47,14 @@ const categoryCardSlides = [
 ];
 
 const HomeScreen = () => {
+  const dispatch = useDispatch();
   const [text, onChangeText] = React.useState('');
+  const message = useSelector(s => s.message);
+
+  useEffect(() => {
+    dispatch({type: 'Change_Message'});
+  }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle={'dark-content'} />
@@ -56,7 +63,7 @@ const HomeScreen = () => {
         source={require('../../../assets/HomePageBackground.jpg')}
         style={styles.imageBackground}>
         <Text style={styles.firstText}>Hi, plant lover!</Text>
-        <Text style={styles.secondText}>Good Afternoon! ⛅</Text>
+        <Text style={styles.secondText}>{message}</Text>
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
