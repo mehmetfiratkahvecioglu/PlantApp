@@ -9,6 +9,7 @@ const baseStyles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 5,
   },
+  innerContainer: {flex: 1, flexDirection: 'row', borderRadius: 14},
   radioContainer: {justifyContent: 'center', marginLeft: 10},
   textsContainer: {
     marginLeft: 10,
@@ -16,6 +17,7 @@ const baseStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
+    fontFamily: 'Rubik',
     color: 'rgba(255, 255, 255, 1)',
     fontWeight: '500',
     fontSize: 16,
@@ -23,6 +25,7 @@ const baseStyles = StyleSheet.create({
     alignItems: 'center',
   },
   detail: {
+    fontFamily: 'Rubik',
     color: 'rgba(255, 255, 255, 0.7)',
     fontWeight: '300',
     fontSize: 12,
@@ -70,6 +73,9 @@ export default {
       borderColor: 'rgba(255, 255, 255, 0.3)',
       borderWidth: 0.5,
     },
+    lineerFirstColor: 'rgba(255, 255, 255, 0.05)',
+    lineerSecondColor: 'rgba(255, 255, 255, 0.05)',
+    lineerThirdColor: 'rgba(255, 255, 255, 0.05)',
   }),
 
   secondary: StyleSheet.create({
@@ -80,5 +86,8 @@ export default {
       borderColor: 'rgba(40, 175, 110, 1)',
       borderWidth: 1.5,
     },
+    lineerFirstColor: 'rgba(40, 175, 110, 0.1)',
+    lineerSecondColor: 'rgba(40, 175, 110, 0)',
+    lineerThirdColor: 'rgba(40, 175, 110, 0.25)',
   }),
 };

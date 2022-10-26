@@ -5,12 +5,14 @@ import {
   TextInput,
   StatusBar,
   FlatList,
+  Image,
 } from 'react-native';
 import React, {useEffect} from 'react';
 import styles from './HomeScreen.style';
 import ExplanationCard from '../../../components/ExplanationCard';
 import CategoryCard from '../../../components/CategoryCard';
 import {useSelector, useDispatch} from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
 const explanationCardSlides = [
   {
     id: '1',
@@ -53,6 +55,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     dispatch({type: 'Change_Message'});
+    SplashScreen.hide();
   }, []);
 
   return (
@@ -64,32 +67,39 @@ const HomeScreen = () => {
         style={styles.imageBackground}>
         <Text style={styles.firstText}>Hi, plant lover!</Text>
         <Text style={styles.secondText}>{message}</Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="🔍 Search for plants"
-          placeholderTextColor={'rgba(175, 175, 175, 1)'}
-        />
+        <View style={styles.inputContainer}>
+          <Image
+            source={require('../../../assets/search.png')}
+            style={styles.searchIcon}
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="Search for plants"
+            placeholderTextColor={'rgba(175, 175, 175, 1)'}
+          />
+        </View>
       </ImageBackground>
-      <Text style={styles.thirdText}>Get Started</Text>
-      <View>
+
+      <View style={styles.contentContainer}>
+        <Text style={styles.thirdText}>Get Started</Text>
         <FlatList
           data={explanationCardSlides}
           renderItem={({item}) => <ExplanationCard item={item} />}
           horizontal
           showsHorizontalScrollIndicator={false}
         />
-        <FlatList
-          columnWrapperStyle={{justifyContent: 'center'}}
-          showsVerticalScrollIndicator={false}
-          key={'#'}
-          keyExtractor={item => '#' + item.id}
-          numColumns={2}
-          data={categoryCardSlides}
-          renderItem={({item}) => <CategoryCard item={item} />}
-        />
       </View>
+      <FlatList
+        columnWrapperStyle={{justifyContent: 'center'}}
+        showsVerticalScrollIndicator={false}
+        key={'#'}
+        keyExtractor={item => '#' + item.id}
+        numColumns={2}
+        data={categoryCardSlides}
+        renderItem={({item}) => <CategoryCard item={item} />}
+      />
     </View>
   );
 };

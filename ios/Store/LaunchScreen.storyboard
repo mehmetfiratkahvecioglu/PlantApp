@@ -16,25 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="eL9-8G-qnd">
-                                <rect key="frame" x="107" y="356" width="200" height="185"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="eL9-8G-qnd">
+                                <rect key="frame" x="107" y="355.5" width="200" height="185"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="appName" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-dm-iPI">
-                                <rect key="frame" x="154" y="815" width="107" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ZVA-SF-0Go"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appName" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-dm-iPI">
+                                <rect key="frame" x="154" y="819" width="106.5" height="23"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eL9-8G-qnd" firstAttribute="centerX" secondItem="bIO-dm-iPI" secondAttribute="centerX" id="8GX-rG-UXm"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="bIO-dm-iPI" secondAttribute="bottom" constant="27" id="K2P-aB-GAj"/>
-                            <constraint firstItem="eL9-8G-qnd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Oz2-QB-M4w"/>
-                            <constraint firstItem="eL9-8G-qnd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pfd-1Y-cGa"/>
-                            <constraint firstItem="eL9-8G-qnd" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="312" id="Zx5-mg-HTI"/>
-                            <constraint firstItem="bIO-dm-iPI" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="154" id="gm8-Jf-W6F"/>
+                            <constraint firstItem="eL9-8G-qnd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CV5-D4-7Kb"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="bIO-dm-iPI" secondAttribute="bottom" constant="20" id="HOY-Uf-stz"/>
+                            <constraint firstItem="bIO-dm-iPI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UAb-ag-s0O"/>
+                            <constraint firstItem="eL9-8G-qnd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jib-Kb-SsX"/>
                         </constraints>
                     </view>
                 </viewController>

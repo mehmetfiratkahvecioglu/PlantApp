@@ -3,11 +3,38 @@ import {StyleSheet, Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  container: {flex: 1, paddingTop: 50, paddingBottom: 50, alignItems: 'center'},
+  container: {
+    flex: 1,
+    paddingTop: 50,
+    paddingBottom: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   flatList: {height: height * 0.75},
-  image: {width: width * 1, height: height * 0.7},
-  title: {fontWeight: '500', fontSize: 28, maxWidth: '80%'},
+  imageContainer: {
+    width: width,
+    height: height * 0.6,
+    alignItems: 'center',
+  },
+  image: {flex: 1},
+  titleContainer: {
+    width: width,
+    paddingLeft: width * 0.05,
+    height: 80,
+  },
+  title: {
+    color: '#13231B',
+    fontFamily: 'Rubik',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    fontSize: 28,
+    letterSpacing: -1,
+    lineHeight: 34,
+  },
+  ObjectImage: {position: 'absolute', bottom: 25, left: '50%'},
+  innerText: {fontWeight: '800'},
   indicatorContainer: {
+    marginTop: 20,
     height: 30,
     width: width * 0.9,
     flexDirection: 'row',

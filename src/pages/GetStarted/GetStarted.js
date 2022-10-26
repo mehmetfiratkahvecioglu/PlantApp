@@ -1,32 +1,38 @@
-import {Text, StyleSheet, SafeAreaView, Image} from 'react-native';
+import {Text, StyleSheet, SafeAreaView, Image, View} from 'react-native';
 import React, {useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
 import LinearGradient from 'react-native-linear-gradient';
 import GreenButton from '../../components/GreenButton';
+import styles from './GetStarted.style';
+
 export default function OnboardingFirst({navigation}) {
   useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hide();
-    }, 1000);
+    SplashScreen.hide();
   }, []);
 
   return (
     <>
       <LinearGradient
         start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
+        end={{x: 1, y: 0.5}}
         colors={[
-          'rgba(192, 240, 255, 1)',
-          'rgba(192, 240, 255, 0.3)',
-          'rgba(192, 240, 255, 1)',
+          'rgba(250, 250, 250, 1)',
+          'rgba(192, 240, 255, 0.6)',
+          'rgba(250, 250, 250, 1)',
         ]}
         style={styles.linearGradient}>
-        <Text>Welcome to PlantApp</Text>
-        <Text>Identify more than 3000+ plants and 88% accuracy.</Text>
-
+        <View style={styles.titleContainer}>
+          <Text style={styles.welcomeText}>
+            Welcome to <Text style={styles.innerText}>PlantApp</Text>
+          </Text>
+          <Text style={styles.identifyText}>
+            Identify more than 3000+ plants and 88% accuracy.
+          </Text>
+        </View>
         <Image
           style={styles.image}
-          source={require('../../assets/ImagegetStarted.png')}
+          resizeMode={'contain'}
+          source={require('../../assets/GetStartedImage.png')}
         />
 
         <GreenButton
@@ -35,33 +41,12 @@ export default function OnboardingFirst({navigation}) {
             navigation.navigate('OnboardingFirstScreen');
           }}
         />
-        <Text>
-          By tapping next, you are agreeing to PlantID Terms of Use & Privacy
-          Policy.
+        <Text style={styles.byText}>
+          By tapping next, you are agreeing to PlantID{' '}
+          <Text style={styles.underLineText}>Terms of Use</Text> &{' '}
+          <Text style={styles.underLineText}>Privacy Policy</Text>.
         </Text>
       </LinearGradient>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  topSafeArea: {
-    flex: 0,
-    backgroundColor: 'rgba(192, 240, 255, 0.5)',
-  },
-  linearGradient: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonText: {
-    fontSize: 18,
-    fontFamily: 'Gill Sans',
-    textAlign: 'center',
-    margin: 10,
-    color: 'black',
-    backgroundColor: 'transparent',
-  },
-
-  image: {width: 375, height: 499},
-});

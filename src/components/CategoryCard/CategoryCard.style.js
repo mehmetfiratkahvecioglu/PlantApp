@@ -3,7 +3,7 @@ const {height, width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    height: height * 0.19,
+    height: height * 0.2,
     width: width * 0.43,
     backgroundColor: 'rgba(244, 246, 246, 1)',
     borderRadius: 12,
@@ -12,7 +12,14 @@ const styles = StyleSheet.create({
     margin: 8,
   },
   image: {flex: 1, padding: 10},
-  title: {fontSize: 17, fontWeight: '600', color: '#13231B', maxWidth: '60%'},
+  title: {
+    fontFamily: 'Rubik',
+    fontSize: 16,
+    fontWeight: '500',
+    letterSpacing: -0.32,
+    color: '#13231B',
+    maxWidth: '60%',
+  },
 });
 
 export default styles;

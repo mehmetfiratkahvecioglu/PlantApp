@@ -1,11 +1,11 @@
-import {View, Text} from 'react-native';
+import {SafeAreaView, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 const DiagnoseScreen = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>DiagnoseScreen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -4,9 +4,9 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: 12,
     marginVertical: 10,
-    marginHorizontal: 5,
+    marginRight: 5,
     height: height * 0.2,
-    width: width * 0.7,
+    width: width * 0.68,
     backgroundColor: 'red',
   },
   image: {flex: 1, borderRadius: 19, justifyContent: 'flex-end'},
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   title: {
+    fontFamily: 'Rubik',
     fontWeight: '600',
     fontSize: 15,
     color: 'rgba(255, 255, 255, 1)',

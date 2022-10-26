@@ -2,7 +2,6 @@ const reducers = (state, action) => {
   var today = new Date();
   var curHr = today.getHours();
 
-  curHr = 5;
   let message = '';
 
   if (curHr < 12 && curHr >= 5) {

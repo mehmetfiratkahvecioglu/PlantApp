@@ -22,11 +22,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 50,
   },
-  xText: {color: 'rgba(255, 255, 255, 1)', fontWeight: 'bold', fontSize: 15},
+  xText: {
+    fontFamily: 'SF Pro Text',
+    color: 'rgba(255, 255, 255, 1)',
+    fontWeight: '600',
+    fontSize: 15,
+    lineHeight: 18,
+    textAlign: 'center',
+  },
   titleContainer: {marginHorizontal: 20, marginBottom: 10},
   title: {
+    fontFamily: 'Rubik',
     color: 'white',
-    fontSize: 27,
+    fontSize: 30,
     lineHeight: 47,
     fontWeight: '300',
   },
@@ -37,7 +45,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 24,
   },
-  flatListContainer: {marginLeft: 10},
+  flatListContainer: {marginLeft: 12},
   buttonsContainer: {
     height: height * 0.4,
     alignItems: 'center',
@@ -46,6 +54,7 @@ const styles = StyleSheet.create({
   innerButtonsContainer: {marginBottom: 15},
   greenButtonContainer: {flex: 1},
   explanation: {
+    fontFamily: 'Rubik',
     fontWeight: '300',
     fontSize: 9,
     color: 'rgba(255, 255, 255, 0.52)',
@@ -54,6 +63,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   termsText: {
+    fontFamily: 'Rubik',
     fontWeight: '300',
     fontSize: 12,
     color: 'rgba(255, 255, 255, 0.52)',

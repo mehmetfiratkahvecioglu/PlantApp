@@ -12,9 +12,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    fontFamily: 'Rubik',
     color: 'rgba(255, 255, 255, 1)',
-    fontWeight: '700',
-    fontSize: 15,
+    fontWeight: '500',
+    fontSize: 16,
     lineHeight: 24,
     fontStyle: 'normal',
     height: 24,
