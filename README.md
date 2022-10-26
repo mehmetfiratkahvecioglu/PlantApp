@@ -1,0 +1,5 @@
+# PlantApp![Simulator Screen Shot - iPhone 11 - 2022-10-26 at 23 44 06](https://user-images.githubusercontent.com/71196378/198135060-29e35dad-c600-4e1d-96eb-52f39f30d7a1.png)
+![Simulator Screen Shot - iPhone 11 - 2022-10-26 at 23 44 17](https://user-images.githubusercontent.com/71196378/198135101-f12da80f-3967-434e-97a0-7a673f9a269e.png)
+![Simulator Screen Shot - iPhone 11 - 2022-10-26 at 23 44 27](https://user-images.githubusercontent.com/71196378/198135139-1db4eee2-b5e8-4567-80a8-be5ce8710c0a.png)
+![Simulator Screen Shot - iPhone 11 - 2022-10-26 at 23 44 35](https://user-images.githubusercontent.com/71196378/198135165-7f7d5b50-b53c-40d9-a0ee-5b8ed18a261b.png)
+![Simulator Screen Shot - iPhone 11 - 2022-10-26 at 23 45 21](https://user-images.githubusercontent.com/71196378/198135177-169e563a-641b-4603-93ee-3743b40cd7da.png)
